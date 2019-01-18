@@ -35,7 +35,9 @@
           <div class="card">
             <div class="card-body">
                                     
-              <form method="post" action="<?php echo route('roles.store'); ?>">
+              <form method="POST" action="<?php echo route('roles.store'); ?>">
+                <?php echo e(csrf_field()); ?>
+
                 <div class="form-group">
                   <label>Descripcion:</label>
                   <input type="text" class="form-control" required placeholder="Descripcion" name="descripcion" id="descripcion"/>

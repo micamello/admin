@@ -38,6 +38,10 @@ Route::post('acciones/search',
 	['uses'=>'AccionesController@search',
 	 'as'=>'acciones.search']);
 
+Route::resource('resultados','ResultadoController');
+// Route::get('dataUser', 'ResultadoController@dataUser')->name('datosUsuario');
+Route::get('resultados', 'ResultadoController@filterData')->name('filtroDatos');
+
 /*Route::match(['get', 'post'], 'register', function(){
     return redirect('/');
 });*/
