@@ -17,6 +17,7 @@
     <link href="<?php echo e(asset('css/bootstrap.min.css')); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo e(asset('css/icons.css')); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo e(asset('css/style.css')); ?>" rel="stylesheet" type="text/css">
+    <?php echo $__env->yieldContent('css'); ?>
   </head>
 
   <body class="fixed-left">
@@ -72,6 +73,7 @@
                   <li><a href="<?php echo e(url('/administradores')); ?>">Administrador</a></li>
                   <li><a href="<?php echo e(url('/roles')); ?>">Rol</a></li>
                   <li><a href="<?php echo e(url('/acciones')); ?>">Acciones del Sistema</a></li>
+                  <li><a href="<?php echo e(url('/resultados')); ?>">Resultados encuestas</a></li>
                 </ul>
               </li>                            
             </ul>
@@ -231,6 +233,7 @@
     
     <!-- App js -->
     <script src="<?php echo e(asset('js/app.js')); ?>"></script>
+    <?php echo $__env->yieldContent('js'); ?>
         
   </body>
 </html>

@@ -17,6 +17,7 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/icons.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    @yield('css')
   </head>
 
   <body class="fixed-left">
@@ -71,6 +72,7 @@
                   <li><a href="{{ url('/administradores') }}">Administrador</a></li>
                   <li><a href="{{ url('/roles') }}">Rol</a></li>
                   <li><a href="{{ url('/acciones') }}">Acciones del Sistema</a></li>
+                  <li><a href="{{ url('/resultados') }}">Resultados encuestas</a></li>
                 </ul>
               </li>                            
             </ul>
@@ -229,6 +231,7 @@
     
     <!-- App js -->
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('js')
         
   </body>
 </html>

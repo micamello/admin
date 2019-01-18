@@ -4106,3 +4106,27 @@ File: Responsive
   color: #2d3b48;
 }
 /*# sourceMappingURL=style.css.map */
+
+/*own styles*/
+.bubble_filter{
+  background-color: #33cdff;
+  box-shadow: 0 2px 6px 0 rgba(51, 205, 255, 0.5);
+  border: 1px solid #33cdff;
+  border-radius: 20px;
+  padding: 2px 1px 2px 5px;
+  color: white;
+  text-align: center;
+}
+
+.bubble_filter:hover{
+  box-shadow: 0 10px 11px 0 rgba(51, 205, 255, 0.5);
+}
+
+.bubble_close{
+  /*position: absolute;*/
+  float: right;
+  cursor: pointer;
+  background-color: #00FFFF;
+  padding: 4px 6px 4px 6px;
+  border-radius: 60%;
+}
