@@ -14,7 +14,8 @@
 						<div class="col-md-10 offset-md-1">
 							<?php $i = 0; $j = 1; $total = 0; $suma = 0; $num = 0;?>
 							@foreach($preguntas as $preg)
-							<?php $num++; if($j != $preg->cuestionario){
+							<?php                
+							$num++; if($j != $preg->cuestionario){
 										$num = 1;
 									?>
 											<tr class="table-primary">
@@ -44,7 +45,7 @@
 									} ?>
 									
 											<tr>
-												<td colspan="1"><span class="badge badge-success"><?php echo $num; ?></span> {{ utf8_decode($preg->descripcion) }}</td>
+												<td colspan="1"><span class="badge badge-success"><?php echo $num; ?></span> {{ $preg->descripcion }}</td>
 												<td colspan="1" class="table-success">
 													<?php foreach (MyConstante::RESPUESTA as $key => $value) {
 														if($preg->valor == $key)
