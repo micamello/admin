@@ -72,9 +72,15 @@
                   <li><a href="{{ url('/administradores') }}">Administrador</a></li>
                   <li><a href="{{ url('/roles') }}">Rol</a></li>
                   <li><a href="{{ url('/acciones') }}">Acciones del Sistema</a></li>
+                  <li><a href="{{ url('/plantillasEmail') }}">Plantillas correo</a></li>
+                </ul>
+              </li>
+              <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-card"></i><span> Consultas </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                <ul class="list-unstyled">
                   <li><a href="{{ url('/resultados') }}">Resultados encuestas</a></li>
                 </ul>
-              </li>                            
+              </li>                         
             </ul>
           </div>
           <div class="clearfix"></div>
