@@ -106,7 +106,7 @@
 	                </tr>
                 </thead>
                 <tbody>
-                  @foreach($respuestas as $respuesta)
+                  @foreach($respuestas as $respuesta)                  
                 	<tr>
                 		<td>{{$respuesta->nombres}}</td>
                 		<td>{{$respuesta->apellidos}}</td>

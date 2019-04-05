@@ -59,7 +59,7 @@
           			</div>
           			<div class="form-group">
           				<label>Vista Previa</label>
-          				<div id="preview_plantilla" style="overflow-y: scroll; max-height: 500px; display: none;">
+          				<div id="preview_plantilla" style="overflow-y: scroll; max-height: 500px;">
           				</div>
           			</div>
                 <br>

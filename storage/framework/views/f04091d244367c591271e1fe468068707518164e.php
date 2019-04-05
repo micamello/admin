@@ -68,7 +68,7 @@
               <li><a href="<?php echo e(url('/home')); ?>" class="waves-effect"><i class="dripicons-device-desktop"></i><span> Inicio</span></a></li>                
               <li class="menu-title">Menu</li>                            
               <li class="has_sub">
-                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-card"></i><span> Mantenimientos </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-document-edit"></i><span> Mantenimientos </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                 <ul class="list-unstyled">
                   <li><a href="<?php echo e(url('/administradores')); ?>">Administrador</a></li>
                   <li><a href="<?php echo e(url('/roles')); ?>">Rol</a></li>
