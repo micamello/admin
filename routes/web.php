@@ -39,8 +39,12 @@ Route::post('acciones/search',
 	 'as'=>'acciones.search']);
 
 Route::resource('resultados','ResultadoController');
-// Route::get('dataUser', 'ResultadoController@dataUser')->name('datosUsuario');
 Route::get('resultados', 'ResultadoController@filterData')->name('filtroDatos');
+
+Route::resource('plantillasEmail', 'PlantillaEmailController');
+Route::get('buscarPlantillaAjax/{id}', 'PlantillaEmailController@dataPlantilla');
+Route::get('/plantillaExiste/{id}/{nombre}', 'PlantillaEmailController@existePlantilla')->name('existePlantilla ');
+
 
 /*Route::match(['get', 'post'], 'register', function(){
     return redirect('/');
