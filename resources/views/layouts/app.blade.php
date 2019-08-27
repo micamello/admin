@@ -19,7 +19,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
     @yield('css')
   </head>
-
+  
+  <!--********************************MENU LATERAL***********************************************-->
+  
   <body class="fixed-left">
 
     <!-- Loader -->
@@ -78,7 +80,8 @@
               <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-card"></i><span> Consultas </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                 <ul class="list-unstyled">
-                  <li><a href="{{ url('/resultados') }}">Resultados encuestas</a></li>
+                  {{-- <li><a href="{{ url('/resultados') }}">Resultados encuestas</a></li> --}}
+                  <li><a href="{{ route('candidatos') }}">Listar Candidatos</a></li>
                 </ul>
               </li>                         
             </ul>

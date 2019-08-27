@@ -458,7 +458,7 @@ code {
 .bg-warning {
   background-color: #f8c955 !important;
 }
-
+ 
 .bg-danger {
   background-color: #f96e5b !important;
 }
@@ -1113,6 +1113,23 @@ code {
   display: block;
 }
 
+.imagen-perfil-2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+    background: #22242a;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+}
+
+.redes-mic {
+    width: 40px;
+    border-radius: 50%;
+}
+
 /* ==============
  Demo Only css
 ===================*/
@@ -1200,8 +1217,8 @@ code {
 
 /*btn-primary*/
 .btn-primary {
-  background-color: #605daf;
-  border: 1px solid #605daf;
+  background-color: #10619f;
+  border: 1px solid #10619f;
   -webkit-box-shadow: 0 2px 6px 0 rgba(96, 93, 175, 0.5);
           box-shadow: 0 2px 6px 0 rgba(96, 93, 175, 0.5);
 }
@@ -3142,15 +3159,15 @@ label {
   Account Pages
 ===================*/
 .accountbg {
-  //background: url("../images/bg-account.jpg");
+  background: url("../images/bg-account.jpg");
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   background-size: cover;
   background-position: center;
-  -webkit-box-shadow: inset 0 0 0 2000px rgba(31, 35, 60, 0.8);
-          box-shadow: inset 0 0 0 2000px rgba(31, 35, 60, 0.8);
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(5, 101, 174, 0.9);
+          box-shadow: inset 0 0 0 2000px rgba(5, 101, 174, 0.9);
 }
 
 .wrapper-page {

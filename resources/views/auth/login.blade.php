@@ -26,7 +26,8 @@
 
             <div class="card">
                 <div class="card-body">
-
+                    
+                    <!--logo-->
                     <div class="text-center m-b-15">
                         <a href="index.html" class="logo logo-admin"><img src="{{ asset('images/logo.png') }}" height="50" alt="logo"></a>
                     </div>
@@ -66,7 +67,7 @@
 
                             <div class="form-group text-center row m-t-20">
                                 <div class="col-12">
-                                    <button class="btn btn-danger btn-block waves-effect waves-light" type="submit">Ingresar</button>
+                                    <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Ingresar</button>
                                 </div>
                             </div>
 

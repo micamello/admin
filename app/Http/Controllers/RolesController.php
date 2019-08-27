@@ -6,7 +6,6 @@ use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Rol;
-use App\Administrador;
 
 class RolesController extends Controller
 {

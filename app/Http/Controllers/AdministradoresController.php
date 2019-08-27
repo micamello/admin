@@ -16,12 +16,15 @@ class AdministradoresController extends Controller
       $this->middleware('auth');
     }
     
-    public function create(){
+    public function create(Request $request){
     	$roles = Rol::all();
+      $request->user()->authorizeRoles(['administrador']);
     	return view('administradores.create')->with('roles',$roles);
     }
 
     public function store(Request $request){  
+
+
       $validator = Validator::make($request->all(), [
         'username' => ['required','min:5','max:50','regex:/^[a-z0-9]+$/i','unique:mfo_admin'],        
         'password' => ['required','min:8','max:15'],
@@ -55,6 +58,8 @@ class AdministradoresController extends Controller
     }
 
     public function index(){
+
+       $request->user()->authorizeRoles(['psicologo','administrador']);
     	$administradores = Administrador::orderBy('id_admin','ASC')->paginate(10);
     	return view('administradores.index')->with('administradores',$administradores);
     }

@@ -19,7 +19,9 @@
     <link href="<?php echo e(asset('css/style.css')); ?>" rel="stylesheet" type="text/css">
     <?php echo $__env->yieldContent('css'); ?>
   </head>
-
+  
+  <!--********************************MENU LATERAL***********************************************-->
+  
   <body class="fixed-left">
 
     <!-- Loader -->
@@ -81,6 +83,9 @@
                 <ul class="list-unstyled">
                   <li><a href="<?php echo e(url('/resultados')); ?>">Resultados encuestas</a></li>
                 </ul>
+                <ul class="list-unstyled">
+                    <li><a href="<?php echo e(route('candidatos')); ?>">Listar Candidatos</a></li>
+                  </ul>
               </li>                         
             </ul>
           </div>

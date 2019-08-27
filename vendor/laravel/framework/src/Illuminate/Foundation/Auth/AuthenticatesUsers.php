@@ -114,7 +114,7 @@ trait AuthenticatesUsers
      */
     protected function authenticated(Request $request, $user)
     {
-        //        
+        //$request->user()->authorizeRoles(['user', 'admin']);   
     }
 
     /**
