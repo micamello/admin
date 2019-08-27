@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="page-content-wrapper ">
 
     <div class="container-fluid">
@@ -14,7 +15,7 @@
             </div>
         </div>
         <!-- end page title end breadcrumb -->
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-lg-3">
@@ -143,8 +144,8 @@
                     
                 </div>
             </div>                                
-        </div>
-        <div class="row">
+        </div> --}}
+        {{-- <div class="row">
             
             <div class="col-xl-4">
                 <div class="card">
@@ -347,8 +348,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        </div> --}}
+        {{-- <div class="row">
             <div class="col-xl-12">
                 <div class="card">                                
                     <div class="card-body">
@@ -443,7 +444,7 @@
                     </div>
                 </div>                                                                   
             </div> 
-        </div>
+        </div> --}}
         <!-- end row -->
         
     </div><!-- container -->

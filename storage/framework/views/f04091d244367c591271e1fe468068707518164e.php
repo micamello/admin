@@ -19,7 +19,9 @@
     <link href="<?php echo e(asset('css/style.css')); ?>" rel="stylesheet" type="text/css">
     <?php echo $__env->yieldContent('css'); ?>
   </head>
-
+  
+  <!--********************************MENU LATERAL***********************************************-->
+  
   <body class="fixed-left">
 
     <!-- Loader -->
@@ -66,21 +68,27 @@
             <ul>
               <li class="menu-title">Principal</li>
               <li><a href="<?php echo e(url('/home')); ?>" class="waves-effect"><i class="dripicons-device-desktop"></i><span> Inicio</span></a></li>                
-              <li class="menu-title">Menu</li>                            
-              <li class="has_sub">
-                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-document-edit"></i><span> Mantenimientos </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                <ul class="list-unstyled">
-                  <li><a href="<?php echo e(url('/administradores')); ?>">Administrador</a></li>
-                  <li><a href="<?php echo e(url('/roles')); ?>">Rol</a></li>
-                  <li><a href="<?php echo e(url('/acciones')); ?>">Acciones del Sistema</a></li>                  
-                </ul>
-              </li>                            
-              <li class="has_sub">
-                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-view-thumb"></i> <span> Consultas </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                <ul class="list-unstyled">
-                  <li><a href="<?php echo e(url('/resultados')); ?>">Resultados encuestas</a></li>                                  
-                </ul>
-              </li>
+              <li class="menu-title">Menu</li> 
+
+              
+                <li class="has_sub">
+                  <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-document-edit"></i><span> Mantenimientos </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                  <ul class="list-unstyled">
+                    
+                    
+                    <li><a href="<?php echo e(url('/acciones')); ?>">Acciones del Sistema</a></li>
+                  </ul>
+                </li>
+                <li class="has_sub">
+                  <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-view-thumb"></i> <span> Consultas </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                  <ul class="list-unstyled">
+                    <li><a href="<?php echo e(route('candidatos')); ?>">Listar Candidatos</a></li>
+                  </ul>
+                </li>
+                
+              
+                
+              
             </ul>
           </div>
           <div class="clearfix"></div>

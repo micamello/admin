@@ -18,25 +18,28 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::resource('administradores','AdministradoresController');
+
 Route::get('administradores/{id}/destroy',
 	['uses'=>'AdministradoresController@destroy',
 	 'as'=>'administradores.destroy']);
+
 Route::post('administradores/search',
 	['uses'=>'AdministradoresController@search',
 	 'as'=>'administradores.search']);
 
 Route::resource('roles','RolesController');
+
 Route::get('roles/{id}/destroy',
 	['uses'=>'RolesController@destroy',
 	 'as'=>'roles.destroy']);
+
 Route::post('roles/search',
 	['uses'=>'RolesController@search',
 	 'as'=>'roles.search']);
 
 Route::get('/acciones', 'AccionesController@index')->name('acciones');
-Route::post('acciones/search',
-	['uses'=>'AccionesController@search',
-	 'as'=>'acciones.search']);
+
+Route::post('acciones/search', ['uses'=>'AccionesController@search', 'as'=>'acciones.search']);
 
 Route::resource('resultados','ResultadoController');
 // Route::get('dataUser', 'ResultadoController@dataUser')->name('datosUsuario');
@@ -47,3 +50,5 @@ Route::get('resultados', 'ResultadoController@filterData')->name('filtroDatos');
 });*/
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('candidatos', 'CandidatosController@listar')->name('candidatos');
