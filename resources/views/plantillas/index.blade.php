@@ -10,8 +10,8 @@
         <div class="page-title-box">
           <div class="btn-group float-right">
             <ol class="breadcrumb hide-phone p-0 m-0">
-              <li class="breadcrumb-item"><a href="{{ url('/home') }}">Inicio</a></li>
-              <li class="breadcrumb-item">Mantenimientos</li>
+              {{-- <li class="breadcrumb-item"><a href="{{ url('/home') }}">Inicio</a></li> --}}
+              <li class="breadcrumb-item">Mantenimiento</li>
               <li class="breadcrumb-item active">Plantillas correo</li>
             </ol>
           </div>
@@ -24,6 +24,9 @@
       <div class="col-lg-12">
         <div class="card">
           <div class="card-body">
+
+        <?php
+          if(MyConstante::SHOWOPTION == 1){?>
         	<div class="row"> 
         	  <div class="col-md-8">
             	<button type="button" class="btn btn-primary waves-effect waves-light" onclick="$(location).attr('href', '<?php echo route('administradores.create'); ?>')"><i class="mdi mdi-file"></i> Nueva Plantilla</button>
@@ -39,6 +42,10 @@
               </form>
             </div>
             </div>
+
+
+        <?php }?>
+
             <p></p>
             <div class="table-responsive">
               <table class="table table-striped mb-0">

@@ -23,7 +23,6 @@
   <!--********************************MENU LATERAL***********************************************-->
   
   <body class="fixed-left">
-
     <!-- Loader -->
     <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
 
@@ -66,27 +65,39 @@
         <div class="sidebar-inner slimscrollleft">
           <div id="sidebar-menu">
             <ul>
-              <li class="menu-title">Principal</li>
-              <li><a href="<?php echo e(url('/home')); ?>" class="waves-effect"><i class="dripicons-device-desktop"></i><span> Inicio</span></a></li>                
-              <li class="menu-title">Menu</li>                            
+                <?php
+                    if(MyConstante::SHOWOPTION == 1){?>
+                    <li class="menu-title">Principal</li>
+                      <li><a href="<?php echo e(url('/home')); ?>" class="waves-effect"><i class="dripicons-device-desktop"></i><span> Inicio</span></a></li>
+                    <?php
+                    }
+                  ?>                
+              <li class="menu-title">Menu</li>
+
               <li class="has_sub">
-                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-document-edit"></i><span> Mantenimientos </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-document-edit"></i><span> Mantenimiento </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                 <ul class="list-unstyled">
-                  <li><a href="<?php echo e(url('/administradores')); ?>">Administrador</a></li>
-                  <li><a href="<?php echo e(url('/roles')); ?>">Rol</a></li>
-                  <li><a href="<?php echo e(url('/acciones')); ?>">Acciones del Sistema</a></li>
+                  <?php
+                    if(MyConstante::SHOWOPTION == 1){?>
+                      <li><a href="<?php echo e(url('/administradores')); ?>">Administrador</a></li>
+                            <li><a href="<?php echo e(url('/roles')); ?>">Rol</a></li>
+                            <li><a href="<?php echo e(url('/acciones')); ?>">Acciones del Sistema</a></li>
+                            <?php
+                    }?>
                   <li><a href="<?php echo e(url('/plantillasEmail')); ?>">Plantillas correo</a></li>
                 </ul>
               </li>
+
               <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-card"></i><span> Consultas </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                 <ul class="list-unstyled">
-                  <li><a href="<?php echo e(url('/resultados')); ?>">Resultados encuestas</a></li>
+                  
+                  <li><a class="active" href="<?php echo e(route('candidatos')); ?>">Lista de Candidatos</a></li>
+                  <li><a href="<?php echo e(route('empresas')); ?>">Lista de Empresas</a></li>
+                  <li><a href="<?php echo e(route('ofertas')); ?>">Lista de Ofertas</a></li>
+                  <li><a href="<?php echo e(route('planes')); ?>">Lista de Planes</a></li>
                 </ul>
-                <ul class="list-unstyled">
-                    <li><a href="<?php echo e(route('candidatos')); ?>">Listar Candidatos</a></li>
-                  </ul>
-              </li>                         
+              </li>
             </ul>
           </div>
           <div class="clearfix"></div>

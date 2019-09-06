@@ -53,6 +53,14 @@ Route::get('/plantillaExiste/{id}/{nombre}', 'PlantillaEmailController@existePla
     return redirect('/');
 });*/
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('candidatos', 'CandidatosController@listar')->name('candidatos');
+Route::get('empresas', 'EmpresasController@listar')->name('empresas');
+Route::get('ofertas', 'OfertasController@listar')->name('ofertas');
+Route::get('buscarOferta/{id}', 'OfertasController@findOfertas');
+Route::get('buscarOfertaAjax/{id}', 'OfertasController@buscarOfertaAjax');
+Route::get('planes', 'PlanesController@listar')->name('planes');
+Route::get('buscarPlan/{id}', 'PlanesController@findPlanes');
+Route::get('buscarPlanAjax/{id_plan}/{id_empresa}', 'PlanesController@buscarPlanAjax');
+

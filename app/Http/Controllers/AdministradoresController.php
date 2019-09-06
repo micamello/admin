@@ -59,7 +59,7 @@ class AdministradoresController extends Controller
 
     public function index(){
 
-       $request->user()->authorizeRoles(['psicologo','administrador']);
+       // $request->user()->authorizeRoles(['psicologo','administrador']);
     	$administradores = Administrador::orderBy('id_admin','ASC')->paginate(10);
     	return view('administradores.index')->with('administradores',$administradores);
     }
