@@ -29,7 +29,7 @@
                     
                     <!--logo-->
                     <div class="text-center m-b-15">
-                        <a href="index.html" class="logo logo-admin"><img src="{{ asset('images/logo.png') }}" height="50" alt="logo"></a>
+                        <a href="index.html" class="logo logo-admin"><img src="{{ asset('images/logo-color.png') }}" height="50" alt="logo"></a>
                     </div>
 
                     <?php if (count($errors->all()) > 0){ ?>

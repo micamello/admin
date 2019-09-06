@@ -8,18 +8,23 @@
 			<table class="table table-hover">
 			  <thead class="etiquetaBody">
 			    <tr>
-			      <th rowspan="2" style="vertical-align: middle; text-align: center;">Foto</th>
-			      <th rowspan="2" style="vertical-align: middle; text-align: center;">Nombre y Apellido</th>
-			      <th rowspan="2" style="vertical-align: middle; text-align: center;width: 100px">Telefono</th>
-			      <th rowspan="2" style="vertical-align: middle; text-align: center;width: 100px">Correo</th>
-			      <th rowspan="2" colspan="2" style="vertical-align: middle; text-align: center;">HV</th>
+			      <th rowspan="2" class="font-weight-light text-cabecera"></th>
+			      <th rowspan="2" class="font-weight-light text-cabecera">Nombres y Apellidos</th>
+			      <th rowspan="2" class="font-weight-light text-cabecera">Edad</th>
+			      <th rowspan="2" class="font-weight-light text-cabecera">Telefono</th>
+			      <th rowspan="2" class="font-weight-light text-cabecera">Correo</th>
+			      <th rowspan="2" class="font-weight-light text-cabecera">Ciudad</th>
+			      <th rowspan="2" class="font-weight-light text-cabecera">Estudios</th>
+			      <th rowspan="2" class="font-weight-light text-cabecera">Fecha Registro</th>
+			      <th rowspan="2" class="font-weight-light text-cabecera">Estatus</th>
+			      <th rowspan="2" class="font-weight-light text-cabecera">HV</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			  	
 			  	@foreach($lista as $array)
 			    <tr>
-                    <td align="right" style="text-align: center; vertical-align: middle;" data-title="Foto: ">
+                    <td align="right" class="text-cabecera" data-title="Foto: ">
                        @if( $array->foto > 0 )
                          <a href='https://www.micamello.com.ec/imagenes/usuarios/profile/{{ $array->username }}.jpg' target="_blank">
                            <img class="imagen-perfil-2" src="https://www.micamello.com.ec/imagenes/usuarios/profile/{{ $array->username }}.jpg" alt="perfil" width="50" height="50"/>
@@ -29,20 +34,38 @@
                          <img class="imagen-perfil-2" src="https://www.micamello.com.ec/imagenes/user.png" alt="perfil" width="50" height="50"/>
                        @endif
                     </td>
-			      <td data-title="Aspirante: " style="vertical-align: middle; text-align: center;">{{ $array->nombres }}&nbspc;&nbspc;{{ $array->apellidos }}
+			      <td data-title="Aspirante: " class="text-cabecera">{{ $array->nombres }}&nbspc;&nbspc;{{ $array->apellidos }}
 			      </td>
-			      <td style="vertical-align: middle; text-align: center;" class="text-center">{{ $array->telefono }}
+			      <td class="text-center text-cabecera">{{ \Carbon\Carbon::parse($array->fecha_nacimiento)->diff(\Carbon\Carbon::now())->format('%y') }}
 			      </td>
-			      <td  style="vertical-align: middle; text-align: center;" class="text-center">{{ $array->correo }}
+			      <td class="text-center text-cabecera">{{ $array->telefono }}
+			      </td>
+			      <td class="text-center text-cabecera">{{ $array->correo }}
+			      </td>
+			      <td class="text-center text-cabecera">{{ $array->nombre }}
+			      </td>
+			      <td class="text-center text-cabecera">{{ $array->descripcion }}
+			      </td>
+			      <td class="text-center text-cabecera">{{ \Carbon\Carbon::parse($array->fecha_creacion)->format('d-m-Y') }}
+			      </td>
+			      <td class="text-center text-cabecera">
+					@if( $array->estado > 0 )
+			      		<span class="user-activo">{{ 'Activo' }}</span>
+			      	@else
+			      	    <span class="user-inactivo">{{ 'Inactivo' }}</span>
+			      	@endif
 			      </td>
 			      {{-- <td title="Descargar Informe de competencias laborales">
 			      	<a href="#"><img src="https://www.micamello.com.ec/imagenes//icono-aspirante-07.png" class="redes-mic" width="100%"></a>
 			      </td> --}}
 			      <td title="Descargar Hoja de vida" data-title="Hoja de vida: " style="vertical-align: middle; text-align: center;">
 			      	@if(!empty($array->formato))
-			      	<a target="_blank" href="https://www.micamello.com.ec/imagenes/usuarios/hv/{{ $array->username }}.{{ $array->formato }}">
-			      	@endif
-			      	<img src="https://www.micamello.com.ec/imagenes//cv-07.png" class="redes-mic" width="100%"></a>
+			      	  <a target="_blank" href="https://www.micamello.com.ec/imagenes/usuarios/hv/{{ $array->username }}.{{ $array->formato }}">
+			      	  <img src="https://www.micamello.com.ec/imagenes//cv-07.png" class="redes-mic" width="100%">
+			        </a>
+			        @endif
+			      </td>
+
 			    </tr>
 			    @endforeach
 			  </tbody>

@@ -1,0 +1,26 @@
+.error_field{
+	/*background-color: #D7537A;*/
+	/*border-radius: 5px;*/
+	color: red;
+	padding:  0 10px 0 10px;
+	text-align: center;
+}
+
+.texto_tags{
+	font-size: 15px;
+}
+
+.textnoappear{
+	color: red;
+	
+}
+
+.tag_error{
+	background-color: #F08686;
+	color: white;
+}
+
+.tag_no_error{
+	background-color: white;
+	color: black;
+}
